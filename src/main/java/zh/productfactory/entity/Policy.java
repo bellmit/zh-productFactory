@@ -1,5 +1,6 @@
 package zh.productfactory.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,11 +11,14 @@ import javax.persistence.*;
 public class Policy {
     @Id
     @GeneratedValue(generator = "idGenerator")
-    private String id;
+    public String id;
 
     @Column(name = "customer_id", length = 64)
-    private String customer_id;
+    public String customer_id;
 
     @Column(name = "product_id", length = 64)
-    private String product_id;
+    public String product_id;
+
+    //@ManyToOne
+    //private Product product;
 }
