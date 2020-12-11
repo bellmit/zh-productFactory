@@ -1,5 +1,6 @@
 package zh.productfactory;
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 
 @RestController
 @SpringBootApplication
+@EnableBatchProcessing
 public class ProductfactoryApplication {
     private JdbcTemplate jdbcTemplate;
 
